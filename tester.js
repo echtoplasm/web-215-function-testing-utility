@@ -15,7 +15,7 @@ const funcStdoutFailure = (func, expout, args, description='', actual) => {
   }
 };
 
-const stdInSuccess = (func, expout, args, description='', actual) => {
+const stdOutSuccess = (func, expout, args, description='', actual) => {
   try{
   console.log(`
       TEST PASSED! FOR ${func.name}
@@ -38,11 +38,11 @@ function functionTest(funcCallback, args, expout, description) {
       funcStdoutFailure(funcCallback, expout, args, description, result);
       console.error('The functions result does not equal expected output');
     }else{
-      stdInSuccess(funcCallback, expout, args, description, result);
+      stdOutSuccess(funcCallback, expout, args, description, result);
     }
   } catch (err) {
     console.error('Unable to test function', err.message);
   }
 }
 
-module.export(functionTest);
+module.exports = functionTest;
