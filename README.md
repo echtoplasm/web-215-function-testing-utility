@@ -5,7 +5,7 @@ A lightweight Node.js testing utility for JavaScript functions. Built for quick 
 ## Installation
 
 1. Download `functionTester.js` 
-2. Place it in your project directory
+2. Place it in your project directory or in your web-215 root directory 
 3. Require it in your JavaScript files
 
 ## Usage
